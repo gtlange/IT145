@@ -52,25 +52,25 @@ point of contact).
 As we explore the use of monkeys as service animals, we want our system to support monkey
 tracking as well as dog tracking. We have identified the following monkey species that are
 eligible for our program:
-* • Capuchin
-* • Guenon
-* • Macaque
-* • Marmoset
-* • Squirrel monkey
-* • Tamarin
+* Capuchin
+* Guenon
+* Macaque
+* Marmoset
+* Squirrel monkey
+* Tamarin
 There are important data elements for monkeys in addition to what we use for dogs. These
 include tail length, height, body length, species, and measurements for torso, skull, and neck.
 ## Software Requirements
 We desire a software application that will help us track the animals we are currently training
 and the animals that have been placed into service. Here are some specifics:
-* • Ability to process requests for a rescue animal: In this case, we would receive the type
+* Ability to process requests for a rescue animal: In this case, we would receive the type
 of animal the customer wants and the country where the customer resides. If we have
 an animal in training in their country, we can reserve that animal for the customer.
-* • Ability to update any information we have on our animals
-* • Ability to see what animals we have in each phase at each location, including “intake”
+* Ability to update any information we have on our animals
+* Ability to see what animals we have in each phase at each location, including “intake”
 and “farm”
-* • Ability to add animals (intake)
-* • Ability to transfer service animals to the farm or place in-service
-* • Ability to view which animals are in-service
-* • Ability to process and receive reports from in-service agencies on the retirement or
+* Ability to add animals (intake)
+* Ability to transfer service animals to the farm or place in-service
+* Ability to view which animals are in-service
+* Ability to process and receive reports from in-service agencies on the retirement or
 death of their rescue animal
