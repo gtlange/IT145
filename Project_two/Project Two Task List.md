@@ -1,0 +1,13 @@
+- [] Modify the RescueAnimal.java class file by adding accessor and mutator methods for each instance variable
+- [] Create the Monkey class using the specification document as a guide
+-- [] Inherit from the RescueAnimal class
+-- [] Implement all attributes with appropriate data structures
+-- [] Include accessors and mutators for all implemented attributes
+- [] Select a method from the Sofware Requirements section of Grazioso Salvare's specification document. Using the selected method, modify the Driver.java class file to do the following
+-- [] Implement the method you have chosen
+-- [] Add attribures as needed to support the required funcionality
+-[] Submit
+-- [] RescueAnimal.java
+-- [] Monkey.java
+-- [] Driver.java
+-- [] Dog.java
