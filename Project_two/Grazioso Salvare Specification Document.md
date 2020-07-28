@@ -27,20 +27,21 @@ rescue animals.
 ## The Animals
 Through years of experience, we have narrowed the list of dog breeds eligible for rescue
 training to the following:
-* • American pit bull terrier
-* • Beagle
-* • Belgian Malinois
-* • Border collie
-* • Bloodhound
-* • Coonhound
-* • English springer spaniel
-* • German shepherd
-* • German shorthaired pointer
-* • Golden retriever
-* • Labrador retriever
-* • Nova Scotia duck tolling retriever
-* • Rough collie
-* • Smooth collie
+* American pit bull terrier
+* Beagle
+* Belgian Malinois
+* Border collie
+* Bloodhound
+* Coonhound
+* English springer spaniel
+* German shepherd
+* German shorthaired pointer
+* Golden retriever
+* Labrador retriever
+* Nova Scotia duck tolling retriever
+* Rough collie
+* Smooth collie
+
 When we acquire a dog, we record the breed, gender, age, weight, date, and the location
 where we obtained them. There is usually a short lag time between when we acquire a dog and
 when they start training, which we document as well. Additionally, we track graduation dates,
