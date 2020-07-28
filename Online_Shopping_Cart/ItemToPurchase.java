@@ -2,7 +2,7 @@ public class ItemToPurchase {
    //Private fields - itemName, itemPrice, and itemQuanity
    private String itemName;
    private int itemPrice;
-   private int itemQuanity;
+   private int itemQuantity;
    
    /*Default Constructor
     itemName - Initialized to "none"
@@ -10,9 +10,9 @@ public class ItemToPurchase {
     itemQuantity - Initialized ito 0
    */
    public ItemToPurchase () {
-      itemName = "none";
-      itemPrice = 0;
-      itemQuantity = 0;
+      String itemName = "none";
+      int itemPrice = 0;
+      int itemQuantity = 0;
       }
     
    //public member methods (mutators & accessors)
@@ -48,7 +48,7 @@ public class ItemToPurchase {
    
    
    public void printItemPurchase() {
-      System.out.println(itemQuantity + " " + itemName + " $" + itemPrice +  
+      System.out.println(itemName + " " + itemQuantity +  " @ $" + itemPrice +  
                          " = $" + (itemPrice * itemQuantity));
    }
 }
