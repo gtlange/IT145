@@ -18,8 +18,8 @@ public class ItemToPurchase {
    //public member methods (mutators & accessors)
    
    //setName() & getName() 
-   public void setName(String itemName) {
-      this.itemName = itemName;
+   public void setName(String productName) {
+      itemName = productName;
       }
       
    public String getName() {
@@ -27,8 +27,8 @@ public class ItemToPurchase {
       }
       
    //setPrice() & getPrice() 
-   public void setPrice(int itemPrice) {
-      this.itemPrice = itemPrice;
+   public void setPrice(int productPrice) {
+      itemPrice = productPrice;
       }
       
    public int getPrice() {
@@ -36,8 +36,8 @@ public class ItemToPurchase {
       }
       
    //setQuantity() & getQuantity() 
-   public void setQuantity(int itemQuantity) {
-      this.itemQuantity = itemQuantity;
+   public void setQuantity(int productQuantity) {
+      itemQuantity = productQuantity;
       }
       
    public int getQuantity() {
