@@ -1,3 +1,9 @@
+/* Geoff Lange
+IT-145
+July 20220
+geoffrey.lange@snhu.edu
+ */
+
 import java.util.Arrays;
 
 public class Monkey extends RescueAnimal {
