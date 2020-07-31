@@ -1,4 +1,10 @@
 
+/* Geoff Lange
+IT-145
+July 20220
+geoffrey.lange@snhu.edu
+ */
+
 public class Dog extends RescueAnimal {
 
     // Instance variable
