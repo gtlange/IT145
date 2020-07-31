@@ -121,84 +121,84 @@ public class RescueAnimal {
 
     // Mutator Methods set to public for encapsulation. Variable parameters named to show user input.
 
-    public void setName(String animalName) {
-        name = animalName;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setType(String animalType) {
-        type = animalType;
+    public void setType(String type) {
+        this.type = type;
     }
 
-    public void setGender(String animalGender) {
-        gender = animalGender;
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
-    public void setAge(int animalAge) {
-        age = animalAge;
+    public void setAge(int age) {
+        this.age = age;
     }
 
-    public void setWeight(float animalWeight) {
-        weight = animalWeight;
+    public void setWeight(float weight) {
+        this.weight = weight;
     }
 
-    public void setAcquisitionDate(SimpleDateFormat animalAcquisitionDate) {
-        acquisitionDate = animalAcquisitionDate;
+    public void setAcquisitionDate(SimpleDateFormat acquisitionDate) {
+        this.acquisitionDate = acquisitionDate;
     }
 
-    public void setStatusDate(SimpleDateFormat animalAcquisitionDate) {
-        statusDate = animalAcquisitionDate;
+    public void setStatusDate(SimpleDateFormat statusDate) {
+        this.statusDate = statusDate;
     }
 
-    public void setAcquisitionSource(String animalAcquisitionSource) {
-        acquisitionSource = animalAcquisitionSource;
+    public void setAcquisitionSource(String acquisitionSource) {
+        this.acquisitionSource = acquisitionSource;
     }
 
-    public void setReserved(Boolean isReserved) {
-        reserved = isReserved;
+    public void setReserved(Boolean reserved) {
+        this.reserved = reserved;
     }
 
-    public void setTrainingLocation(String animalTrainingLocation) {
-        trainingLocation = animalTrainingLocation;
+    public void setTrainingLocation(String trainingLocation) {
+        this.trainingLocation = trainingLocation;
     }
 
-    public void setTrainingStart(SimpleDateFormat animalTrainingStart){
-        trainingStart = animalTrainingStart;
+    public void setTrainingStart(SimpleDateFormat trainingStart){
+        this.trainingStart = trainingStart;
     }
 
-    public void setTrainingEnd(SimpleDateFormat animalTrainingEnd) {
-        trainingEnd = animalTrainingEnd;
+    public void setTrainingEnd(SimpleDateFormat trainingEnd) {
+        this.trainingEnd = trainingEnd;
     }
 
-    public void setTrainingStatus(String animalTrainingStatus) {
-        trainingStatus = animalTrainingStatus;
+    public void setTrainingStatus(String trainingStatus) {
+        this.trainingStatus = trainingStatus;
     }
 
-    public void setInServiceCountry(String serviceCountry) {
-        inServiceCountry = serviceCountry;
+    public void setInServiceCountry(String inServiceCountry) {
+        this.inServiceCountry = inServiceCountry;
     }
 
-    public void setInServiceCity(String serviceCity) {
-        inServiceCity = serviceCity;
+    public void setInServiceCity(String inServiceCity) {
+        this.inServiceCity = inServiceCity;
     }
 
-    public void setInServiceAgency(String serviceAgency) {
-        inServiceAgency = serviceAgency;
+    public void setInServiceAgency(String inServiceAgency) {
+        this.inServiceAgency = inServiceAgency;
     }
 
-    public void setInServicePOC(String servicePOC) {
-        inServicePOC = servicePOC;
+    public void setInServicePOC(String inServicePOC) {
+        this.inServicePOC = inServicePOC;
     }
 
-    public void setInServiceEmail(String serviceEmail){
-        inServiceEmail = serviceEmail;
+    public void setInServiceEmail(String inServiceEmail){
+        this.inServiceEmail = inServiceEmail;
     }
 
-    public void setInServicePhone(String servicePhone) {
-        inServicePhone= servicePhone;
+    public void setInServicePhone(String inServicePhone) {
+        this.inServicePhone= inServicePhone;
     }
 
-    public void setInServicePostalAddress(String servicePostalAddress) {
-        inServicePostalAddress = servicePostalAddress;
+    public void setInServicePostalAddress(String inServicePostalAddress) {
+        this.inServicePostalAddress = inServicePostalAddress;
     }
 
 
