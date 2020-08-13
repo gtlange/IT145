@@ -1,8 +1,6 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import static java.lang.Integer.parseInt;
-
 public class Driver {
 
     // instance variables (add more as needed)
@@ -12,37 +10,103 @@ public class Driver {
 
 
     public static void main(String[] args) {
+        Scanner scnr = new Scanner(System.in);
+        String userChoice = "";
 
-        initializeShipList();       // initial ships
-        initializeCruiseList();     // initial cruises
-        initializePassengerList();  // initial passengers
+        initializeShipList(shipList);       		// initial ships
+        initializeCruiseList(cruiseList);    		// initial cruises
+        initializePassengerList(passengerList);	// initial passengers
 
-        // add loop and code here that accepts and validates user input
-        // and takes the appropriate action. include appropriate
-        // user feedback and redisplay the menu as needed
+        //do-while to continue prompting until "x" is entered to quit
+        do {
+            try {
+                /* Try-catch block for error handling
+                The displayMenu() method is called to display the text menu.
+                Used if-else if statements to validate userChoice
+                */
+
+                displayMenu();
+                userChoice = scnr.nextLine();
+
+                if (userChoice.equals("1")) {
+                    addShip();
+                }
+                else if (userChoice.equals("2")) {
+                    editShip();
+                }
+                else if (userChoice.equals("3")) {
+                    addCruise();
+                }
+                else if (userChoice.equals("4")) {
+                    editCruise();
+                }
+                else if (userChoice.equals("5")) {
+                    addPassenger();
+                }
+                else if (userChoice.equals("6")) {
+                    editPassenger();
+                }
+                else if (userChoice.equalsIgnoreCase("A")) {
+                    printShipList("name");
+                }
+                else if (userChoice.equalsIgnoreCase("B")) {
+                    printShipList("active");
+                }
+                else if (userChoice.equalsIgnoreCase("C")) {
+                    printShipList("full");
+                }
+                else if (userChoice.equalsIgnoreCase("D")) {
+                    printCruiseList("list");
+                }
+                else if (userChoice.equalsIgnoreCase("E")) {
+                    printCruiseList("details");
+                }
+                else if (userChoice.equalsIgnoreCase("F")) {
+                    printPassengerList();
+                }
+                else if (userChoice.equalsIgnoreCase("x")) {
+                    System.out.println("Goodbye...");
+                    return;
+                }
+            }
+            //catch block for errors.
+            catch (Exception e) {
+                System.out.println("Error, invalid input. Please try again.");
+                e.printStackTrace();
+            }
+        }while (!userChoice.equalsIgnoreCase("x"));
 
 
     }
 
+
+
     // hardcoded ship data for testing
     // Initialize ship list
-    public static void initializeShipList() {
-        add("Candy Cane", 20, 40, 10, 60, true);
-        add("Peppermint Stick", 10, 20, 5, 40, true);
-        add("Bon Bon", 12, 18, 2, 24, false);
-        add("Candy Corn", 12, 18, 2, 24, false);
+    public static void initializeShipList(ArrayList<Ship> shipList) {
+        shipList.add(new Ship("Candy Cane", 20, 40, 10, 60, true));
+        shipList.add(new Ship("Peppermint Stick", 10, 20, 5, 40, true));
+        shipList.add(new Ship("Bon Bon", 12, 18, 2, 24, false));
+        shipList.add(new Ship("Candy Corn", 12, 18, 2, 24, false));
+        shipList.add(new Ship("Malitta Coffee", 12, 18, 2, 24, true));
     }
 
     // hardcoded cruise data for testing
     // Initialize cruise list
-    public static void initializeCruiseList() {
+    public static void initializeCruiseList(ArrayList<Cruise> cruiseList) {
         Cruise newCruise = new Cruise("Southern Swirl", "Candy Cane", "Miami", "Cuba", "Miami");
         cruiseList.add(newCruise);
+        Cruise newCruise1 = new Cruise("Southern Biscuit", "Kandy Kaine", "ZMACenter", "Kuba", "Kuba");
+        cruiseList.add(newCruise1);
+        Cruise newCruise2 = new Cruise("Southern", "Carnival", "FooManChu", "Timbuktu", "Jordan");
+        cruiseList.add(newCruise2);
+        Cruise newCruise3 = new Cruise("Alaskan Cruise", "Sealaska", "Brazil", "Fairbanks", "Minas Gerais");
+        cruiseList.add(newCruise3);
     }
 
-    // hardcoded cruise data for testing
-    // Initialize passenger list
-    public static void initializePassengerList() {
+    //hardcoded cruise data for testing
+    //Initialize passenger list
+    public static void initializePassengerList(ArrayList<Passenger> passengerList) {
         Passenger newPassenger1 = new Passenger("Neo Anderson", "Southern Swirl", "STE");
         passengerList.add(newPassenger1);
 
@@ -54,8 +118,7 @@ public class Driver {
     }
 
     // custom method to add ships to the shipList ArrayList
-    public static void add(String tName, int tBalcony, int tOceanView,
-                           int tSuite, int tInterior, boolean tInService) {
+    public static void add(String tName, int tBalcony, int tOceanView, int tSuite, int tInterior, boolean tInService) {
         Ship newShip = new Ship(tName, tBalcony, tOceanView, tSuite, tInterior, tInService);
         shipList.add(newShip);
     }
@@ -78,13 +141,21 @@ public class Driver {
             for (int i = 0; i < shipList.size(); i++) {
                 System.out.println(shipList.get(i));
             }
-        } else if (listType == "active") {
+        } else if (listType == "active") { 								// TODO: FIX this code  Print ships which contain
+            // 	boolean "true" for inService status
             System.out.println("\n\nSHIP LIST - Active");
-
+            int i = 0; 													//Counter set to zero
+            for (i = 0; i < shipList.size(); ++i) {
+                if (shipList.get(i).getInService()) {
+                    System.out.println(shipList.get(i).toString());		//Use toString method which returns ship's name
+                }
+            }
+            i = i + 1;													//Increment counter when exiting for loop
             // complete this code block
 
 
         } else if (listType == "full") {
+            // TODO: Fix this code
             System.out.println("\n\nSHIP LIST - Full");
             System.out.println("-----------------------------------------------");
             System.out.println("                    Number of Rooms     In");
@@ -150,10 +221,32 @@ public class Driver {
 
     // Add a New Ship
     public static void addShip() {
+        Scanner newShipInput = new Scanner(System.in);
+        int x = 1;
 
-        // complete this method
-
+        do {
+            try {
+                System.out.println("Enter the new ship's name: ");
+                String newShipName = newShipInput.nextLine();
+                for (Ship eachShip: shipList) {											//Compare input from user to each shipName in shipList using enhanced for loop
+                    if (eachShip.getShipName().equalsIgnoreCase(newShipName)) {
+                        System.out.println("That ship is already in the system.");
+                        return; 														//If duplicate, exit addShip method and present user with message ship already exists
+                    }
+                }
+                Ship newShip1 = new Ship(newShipName,20, 40, 10, 60, true);				//Since shipName is not a duplicate, create new ship object containing instance variables and input from user as shipName
+                shipList.add(newShip1);													//Add new ship object to shipList ArrayList
+                System.out.println("Your ship has been added successfully");			//Notify user ship has been added
+                x = 2;
+            } catch (Exception e) {														//Code executed in the event of an exception
+                System.out.println("Error - please enter valid character.");
+                e.printStackTrace();
+            }
+        } while(x==1);
     }
+    // complete this method
+
+
 
     // Edit an existing ship
     public static void editShip() {
@@ -166,10 +259,31 @@ public class Driver {
     // Add a New Cruise
     public static void addCruise() {
 
-        // complete this method
+        Scanner newCruiseInput1 = new Scanner(System.in);												//Input from user
+        System.out.println("Enter the ship name: ");
+        String newShipName = newCruiseInput1.nextLine();
 
-        
-    }
+        for (Ship eachShip: shipList) {
+            if (eachShip.getShipName().equalsIgnoreCase(newShipName) && eachShip.getInService()) {		//Ensures ship unique and is inSservice
+                System.out.println("Ship found and in service");
+                continue;
+            }
+        }
+        for (Cruise eachCruise: cruiseList) {															//Ensures ship does not show up on cruiseList
+            if (eachCruise.getCruiseShipName().equalsIgnoreCase(newShipName)) {
+                System.out.println("Error: Cruise Ship Name taken");
+                return;
+            }
+        }
+        Cruise newCruise5 = new Cruise("Sea Starlett", newShipName, "Bolivia", "Taiwan", "Bolivia");	//Creates new cruise object
+        cruiseList.add(newCruise5);																		//Adds cruise object to cruiseList ArrayList
+        System.out.println("Cruise successfully added");
+
+    }//END OF addCruise() METHOD****************************************************************************************
+
+
+
+
 
     // Edit an existing cruise
     public static void editCruise() {
